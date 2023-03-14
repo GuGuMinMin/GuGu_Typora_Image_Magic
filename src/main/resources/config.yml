@@ -1,0 +1,24 @@
+request:
+# 超时时间 单位秒
+  timeout: 10
+# 代理配置
+  proxy:
+    open: false
+    host:
+    port:
+  url: https://imgbed.link/imgbed/file/upload
+  formData:
+    open: true
+#   指定文件类型的key值
+    fileName: file
+#   添加其他需要的键值对
+    keyValue:
+      key: ab
+# 添加请求头
+  headers:
+    Authorization: test
+response:
+#  超时时间 单位秒
+  timeout: 10
+#  json-path表达式取回需要的结果
+  body: $.rows[0].url
